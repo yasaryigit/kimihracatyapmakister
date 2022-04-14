@@ -47,15 +47,71 @@ public class satiskontrolu : MonoBehaviour
 
         while(kontrol == 100)
         {
-            
-          
-            amerikaistek1 = Random.Range(4,6);
-            rusyaistek1 = Random.Range(4, 6);
-            kanadaistek1 = Random.Range(4, 6);
 
-            amerikaistek2 = Random.Range(4, 6);
-            rusyaistek2 = Random.Range(4, 6);
-            kanadaistek2 = Random.Range(4, 6);
+
+            if (general.urun1_sayi > 0 & general.urun1_sayi < 6 || general.urun2_sayi > 0 & general.urun2_sayi < 6 || general.urun3_sayi > 0 & general.urun3_sayi < 6)
+            {
+                amerikaistek1 = Random.Range(4, 6);
+                amerikaistek2 = Random.Range(4, 6);
+            }
+            else if (general.urun1_sayi > 5 & general.urun1_sayi < 10 || general.urun2_sayi > 5 & general.urun2_sayi < 10 || general.urun3_sayi > 5 & general.urun3_sayi < 10)
+            {
+                amerikaistek1 = Random.Range(2, 6);
+                amerikaistek2 = Random.Range(4, 7);
+            }
+            else if (general.urun1_sayi > 7 & general.urun1_sayi < 15 || general.urun2_sayi > 7 & general.urun2_sayi < 15 || general.urun3_sayi > 7 & general.urun3_sayi < 15)
+            {
+                amerikaistek1 = Random.Range(3, 6);
+                amerikaistek2 = Random.Range(4, 9);
+            }
+            else
+            {
+                amerikaistek1 = Random.Range(4,15);
+                amerikaistek2 = Random.Range(4, 7);
+            }
+
+
+            if (general.urun4_sayi > 2 & general.urun4_sayi < 6 || general.urun5_sayi > 2 & general.urun5_sayi < 6 || general.urun6_sayi > 2 & general.urun6_sayi < 6)
+            {
+                rusyaistek1 = Random.Range(4, 6);
+                rusyaistek2 = Random.Range(4, 6);
+            }
+            else if (general.urun4_sayi > 5 & general.urun4_sayi < 10 || general.urun5_sayi > 5 & general.urun5_sayi < 10 || general.urun6_sayi > 5 & general.urun6_sayi < 10)
+            {
+                rusyaistek1 = Random.Range(3, 6);
+                rusyaistek2 = Random.Range(4, 7);
+            }
+            else if (general.urun4_sayi > 7 & general.urun4_sayi < 15 || general.urun5_sayi > 7 & general.urun5_sayi < 15 || general.urun6_sayi > 7 & general.urun6_sayi < 15)
+            {
+                rusyaistek1 = Random.Range(3, 6);
+                rusyaistek2 = Random.Range(4, 9);
+            }
+            else
+            {
+                rusyaistek1 = Random.Range(4, 15);
+                rusyaistek2 = Random.Range(4, 7);
+            }
+
+            if (general.urun7_sayi > 2 & general.urun7_sayi < 6 || general.urun8_sayi > 2 & general.urun8_sayi < 6 || general.urun9_sayi > 2 & general.urun9_sayi < 6)
+            {
+                kanadaistek1 = Random.Range(4, 6);
+                kanadaistek2 = Random.Range(4, 6);
+            }
+            else if (general.urun7_sayi > 5 & general.urun7_sayi < 10 || general.urun8_sayi > 5 & general.urun8_sayi < 10 || general.urun9_sayi > 5 & general.urun9_sayi < 10)
+            {
+                kanadaistek1 = Random.Range(3, 6);
+                kanadaistek2 = Random.Range(4, 7);
+            }
+            else if (general.urun7_sayi > 7 & general.urun7_sayi < 15 || general.urun8_sayi > 7 & general.urun8_sayi < 15 || general.urun9_sayi > 7 & general.urun9_sayi < 15)
+            {
+                kanadaistek1 = Random.Range(3, 6);
+                kanadaistek2 = Random.Range(4, 9);
+            }
+            else
+            {
+                kanadaistek1 = Random.Range(4, 15);
+                kanadaistek2 = Random.Range(4, 7);
+            }
 
 
 
@@ -106,7 +162,7 @@ public class satiskontrolu : MonoBehaviour
 
 
 
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
         }
 
 
